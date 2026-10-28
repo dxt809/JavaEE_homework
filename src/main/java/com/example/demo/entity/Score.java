@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 public class Score {
+    private long id;
     private String studentNo;
     private String courseId;
     private int score;
@@ -12,6 +13,14 @@ public class Score {
         this.studentNo = studentNo;
         this.courseId = courseId;
         this.score = score;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getStudentNo() {
