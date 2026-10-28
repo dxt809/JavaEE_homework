@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.common.ApiResponse;
 import com.example.demo.entity.Course;
 import com.example.demo.service.ScoreService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class CourseController {
     }
 
     @GetMapping
-    public List<Course> listCourses() {
-        return scoreService.listCourses();
+    public ApiResponse<List<Course>> listCourses() {
+        return ApiResponse.ok(scoreService.listCourses());
     }
 }
